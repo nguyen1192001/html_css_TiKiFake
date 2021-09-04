@@ -1,0 +1,121 @@
+:root{
+    --primary-color:#00a9e0;
+    --while-color:#fff;
+    --black-color:#000;
+    --text-color:#999;
+    --boder-color:#dbdbdb;
+    --modal-color:#3a5a98;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(74, 74, 74);
+}
+body{
+    background-color: #f9f9f9;
+}
+.container,
+.slider{
+    padding: 0 54px;
+}
+
+.grid{
+    width: 1380px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid__column-2{
+   
+    width: 20%;
+}
+.grid__column-3{
+    width: 30%;
+}
+.grid__column-7{
+    padding-right: 10px;
+    width: 68%;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+/* modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal__body{
+    --growth-from:0.7;
+    --growth-to:1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+.btn:hover{
+    color: var(--while-color);
+}
+.btn--normal:hover{
+    color: var(--text-color);
+}
+
+.mt20{
+    margin-top: 20px;
+}
+.mr-8{
+    margin-right: 8px;
+}
+.ml-16{
+    margin-left: 16px;
+}
+.line{
+    border-bottom: 1px solid var(--text-color);
+}
+.btn-pay{
+    height: 42px;
+    background-color: var(--modal-color);
+    color: var(--while-color);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-pay:hover{
+    background-color:var(--primary-color);
+}
+.flex{
+    display: flex;
+}
